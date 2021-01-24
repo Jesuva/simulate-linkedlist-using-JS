@@ -16,8 +16,20 @@
       }
       .row{
         padding:30px;
+        display:box;
+        width:100%;
       }
-      
+      .node{
+        width:50%;
+        border:1px solid black;
+      }
+      /* .between{
+        width:40%;
+        border: 3px dotted #0099CC;
+        margin-left:10px;
+        margin-right:10px;
+      }
+       */
     </style>
     <body>
 
@@ -145,7 +157,7 @@
         let thidata = $('#newnode').val();
         ll.addNode(thidata); 
         console.log(ll.displayNodes());
-        var thisdiv = '<div class="col-3" id="'+thidata+'"><h3>'+thidata+'</h3></div>';
+        var thisdiv = '<div class="col-3" id="'+thidata+'"><div class="node"><h3>'+thidata+'</h3></div><hr class="between"></div>';
         $('.linkedlist').append(thisdiv);      
       })
 
